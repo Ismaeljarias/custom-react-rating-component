@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
-const StarRating = ({ rating, setRating, hover, setHover }) => {
+const StarRating = ({ starCount }) => {
+  const [rating, setRating] = useState(starCount);
+  const [hover, setHover] = useState(starCount);
+
   return (
     <div>
       {[...Array(5)].map((star, i) => {
